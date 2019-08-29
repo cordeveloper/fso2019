@@ -1,0 +1,5 @@
+browser: user send form, spa.js prevent default send form,
+spa.js create a object with form information and post to server, 
+add ELEMENT li to DOM with new entry of form.
+browser -> server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+server --> browser: code 201 CREATED
