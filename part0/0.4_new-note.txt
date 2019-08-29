@@ -1,0 +1,16 @@
+browser -> server: Http POST https://fullstack-exampleapp.herokuapp.com/new_note
+server: PUSH new Note in note's array
+server --> browser: 302 CODE : REDIRECT TO https://fullstack-exampleapp.herokuapp.com/notes
+browser -> server: HTML GET https://fullstack-exampleapp.herokuapp.com/notes
+server --> browser: html 
+browser -> server: HTML GET https://fullstack-exampleapp.herokuapp.com/main.css
+server --> browser: main.css
+browser -> server: HTML GET https://fullstack-exampleapp.herokuapp.com/main.js
+server --> browser: main.js
+
+browser: Execute main.js -> main.js request data.json
+
+browser: -> server HTML GET https://fullstack-exampleapp.herokuapp.com/data.json
+server: --> browser data.json
+
+browser: executes event handler that renders note to display
