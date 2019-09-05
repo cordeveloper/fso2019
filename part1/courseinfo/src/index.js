@@ -1,13 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Header = (props) => {
-  return (
-   <React.Fragment>
-      <h1>{props.course}</h1>
-   </React.Fragment>
-  )
-}
+
 
 const Content = (props) => {
 
@@ -35,15 +29,9 @@ const Part = (props) => {
   )
 }
 
-const Total = (props) => {
- 
-  return (
-    <p>Number of exercises {props.content}</p>
-  )
-}
+
 
 const App = () => {
-  const course = 'Half Stack application development';
 
 
   const contentData = [
@@ -61,14 +49,12 @@ const App = () => {
       }
     ]
 
-    const total = 32;
+
   
 
   return (
     <div>
-     <Header course={course}/>
-     <Content content= {contentData}/>
-     <Total content= {total}/>
+      <Content content= {contentData}/>
     </div>
   )
 }
