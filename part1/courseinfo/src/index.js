@@ -1,62 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
-
-const Content = (props) => {
-
-  return (
-    <React.Fragment>
-      {
-        props.content.map(
-          part => {
-            
-            return(
-              <Part part={part.name} exercises={part.exercises}/>
-            )
-          }
-        )
-      }
-    </React.Fragment>
-  )
-
-}
-
 const Part = (props) => {
-
-  return(
-    <p>{props.part} {props.exercises}</p>
-  )
+  return (
+    <p>{props.name} {props.exercises}</p>
+  ) 
 }
-
-
 
 const App = () => {
+  const course = 'Half Stack application development';
+  const part1 = {
+    name: 'Fundamentals of React',
+    exercises: 10
+  }
+  const part2 = {
+    name: 'Using props to pass data',
+    exercises: 7
+  }
+  const part3 = {
+    name: 'State of a component',
+    exercises: 14
+  }
 
-
-  const contentData = [
-      {
-        name: 'Fundamentals of React',
-        exercises: 10
-      },
-      {
-        name: 'Using props to pass data',
-        exercises: 7
-      },
-      {
-        name: 'State of a component',
-        exercises: 15
-      }
-    ]
-
-
-  
-
-  return (
+  return(
     <div>
-      <Content content= {contentData}/>
+     <Part name={part1.name} exercises={part1.exercises}></Part>
+     <Part name={part2.name} exercises={part2.exercises}></Part>
+     <Part name={part3.name} exercises={part3.exercises}></Part>
     </div>
   )
+
+  
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
